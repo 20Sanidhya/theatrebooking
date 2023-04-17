@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Tickets</title>
+	<link rel="stylesheet" type="text/css" href="bookpage-style.css">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		// Extract the show name from the URL parameter
+		function getShowName() {
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			return urlParams.get('show');
+		}
+
+		// Update the heading with the show name
+		window.onload = function() {
+			const showName = getShowName();
+			const heading = document.querySelector('h1');
+			heading.innerHTML = `Book Tickets for ${showName}`;
+		}
+	</script>
+</head>
+<body>
+	<h1>Loading...</h1>
+	<form id="myForm">
+		<label for="numTickets">Number of Tickets:</label>
+		<input type="number" id="numTickets" name="numTickets" min="1" max="10" required><br><br>
+		
+		<label for="ticketType">Ticket Type:</label>
+		<select id="ticketType" name="ticketType">
+			<option value="Standard">Standard</option>
+			<option value="VIP">VIP (+$10)</option>
+			<option value="Premium">Premium (+$20)</option>
+		</select><br><br>
+		
+		<label for="fullName">Full Name:</label>
+		<input type="text" id="fullName" name="fullName" required><br><br>
+		
+		<label for="phone">Phone Number (+353):</label>
+		<input type="text" id="phone" name="phone" required><br><br>
+		
+		<label for="address">Home Address:</label>
+		<textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+		
+		<button type="submit">Book Now</button>
+	</form>
+
+	<script>
+
+		const form = document.querySelector('#myForm');
+		
+		form.addEventListener('submit', (event) => {
+		  event.preventDefault(); // prevent default form submission
+		window.alert("Booking Confirmed!")
+		  const address = document.querySelector('#address').value; // get input field value
+		console.log(address)
+		const fullName = document.querySelector('#fullName').value; // get input field value
+		console.log(fullName)
+		const numTickets = document.querySelector('#numTickets').value; // get input field value
+		console.log(numTickets)
+		const ticketType = document.querySelector('#ticketType').value; // get input field value
+		console.log(ticketType)
+		const phoneNumber = document.querySelector('#phoneNumber').value; // get input field value
+		console.log(phoneNumber)
+
+		  // send AJAX request to server
+		  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://localhost:8000/bookpage');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      console.log(response);
+    }
+  };
+  xhr.send(JSON.stringify({ address: address, fullName:fullName, numTickets:numTickets, ticketType:ticketType, phoneNumber:phoneNumber}));
+		});
+	</script>
+		
+</body>
+</html>

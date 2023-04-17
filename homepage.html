@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shows</title>
+	<link rel="stylesheet" type="text/css" href="homepage-style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container" id="shows">
+        <div class="header">Show List! <span class="count"></span></div>
+        <div class="tags">
+          <div>Filter by Genre:</div>
+          <div class="tag filter" genre-filter="Comedy">Comedy </div>
+          <div class="tag filter" genre-filter="Action">Action </div>
+          <div class="tag filter" genre-filter="Horror">Horror</div>
+          <div class="tag filter" genre-filter="Romance">Romance </div>
+          <div class="tag filter" genre-filter="Family">Family </div>
+          <div class="tag filter" genre-filter="Sci-fi">Sci-Fi </div>
+          <div class="tag filter" genre-filter="Musical">Musical </div>
+        </div>
+        <div class="tags">
+            <div>Filter by Date:</div>
+            <div class="tag filter" date-filter="21st April">21st April </div>
+            <div class="tag filter" date-filter="22nd April">22nd April </div>
+            <div class="tag filter" date-filter="23rd April">23rd April</div>
+            <div class="tag filter" date-filter="28th April">28th April </div>
+            <div class="tag filter" date-filter="29th April">29th April </div>
+            <div class="tag filter" date-filter="30th April">30th April</div>
+            <div class="tag filter" date-filter="5th May">5th May </div>
+            <div class="tag filter" date-filter="6th May">6th May </div>
+            <div class="tag filter" date-filter="7th May">7th May </div>
+          </div>
+        <div class="tags">
+            <div>Filter by Ticket Availability:</div>
+            <div class="tag filter" ticket-filter="Available">Available </div>
+            <div class="tag filter" ticket-filter="Sold-Out">Sold-Out </div>
+        </div>
+        <div class="controls">
+          <div>Sort by:</div>
+          <a class="sort" href="#" data-sort="price">Price</a>
+          <a class="sort" href="#" data-sort="num_ticket">Tickets Available</a>
+        </div>
+        <div class="list">
+          <div class="list__item">
+            <div class="shows">Love Potion 404</div>
+            <div class="meta">
+              <div class="genre">Romance</div>
+              <div class="date">21st April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">250 tickets left</div>
+              <div class="price">$50-Standard</div>
+              <div class="description">A romantic comedy about a tech nerd who creates a love potion that goes awry when he accidentally drinks it himself.</div>
+              </div>
+              <div class="link"><a href="bookpage.html?show=Love%20Potion%20404">Book Tickets Love Potion 404</a></div>
+            </div>
+          
+          <div class="list__item">
+            <div class="shows">Zombie Night</div>
+            <div class="meta">
+              <div class="genre">Horror</div>
+              <div class="date">22nd April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">200 tickets left</div>
+              <div class="price">$30-Standard</div>
+              <div class="description">A spine-chilling tale of a group of survivors trying to escape a town overrun by zombies.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Zombie%20Night">Book Tickets for Zombie Night</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Galactic Odyssey</div>
+            <div class="meta">
+              <div class="genre">Sci-fi</div>
+              <div class="date">23rd April</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$25-Standard</div>
+              <div class="description">An epic journey through space and time that explores the mysteries of the universe.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Galactic%20Odyssey">Book Tickets for Galactic Odyssey</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Ties of Family</div>
+            <div class="meta">
+              <div class="genre">Family</div>
+              <div class="date">28th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">300 tickets left</div>
+              <div class="price">$40-Standard</div>
+              <div class="description">A heartwarming story about the ties that bind us together, told through the eyes of a close-knit family.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Ties%20of%20Family">Book Tickets for The Ties of Family</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Action Hero</div>
+            <div class="meta">
+              <div class="genre">Action</div>
+              <div class="date">29th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">150 tickets left</div>
+              <div class="price">$70-Standard</div>
+              <div class="description">A thrilling adventure about a superhero who must save the world from certain doom.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Action%20Hero">Book Tickets for Action Hero</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Comedy of Errors</div>
+            <div class="meta">
+              <div class="genre">Comedy</div>
+              <div class="date">30th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">100 tickets left</div>
+              <div class="price">$20-Standard</div>
+              <div class="description">A hilarious romp about mistaken identities and misunderstandings that will leave you in stitches.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Comedy%20of%20Errors">Book Tickets for Comedy of Errors</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Haunting</div>
+            <div class="meta">
+              <div class="genre">Horror</div>
+              <div class="date">5th May</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$38-Standard</div>
+              <div class="description">A bone-chilling ghost story about a family who moves into a haunted house and soon realizes they are not alone.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Haunting">Book Tickets for The Haunting</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Alien Invasion</div>
+            <div class="meta">
+              <div class="genre">Sci-fi</div>
+              <div class="date">6th May</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">250 tickets left</div>
+              <div class="price">$60-Standard</div>
+              <div class="description">A thrilling sci-fi adventure about an alien invasion of Earth and the battle for humanitys survival.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Alien Invasion">Book Tickets for Alien Invasion</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Wedding Planner</div>
+            <div class="meta">
+              <div class="genre">Romance</div>
+              <div class="date">7th May</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">200 tickets left</div>
+              <div class="price">$50-Standard</div>
+              <div class="description">A romantic comedy about a wedding planner who falls for the groom and must navigate the rocky road of love.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Wedding%20Planner">Book Tickets for The Wedding Planner</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Pirates of the Cornettino</div>
+            <div class="meta">
+              <div class="genre">Musical</div>
+              <div class="date">21st April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">300 tickets left</div>
+              <div class="price">$80-Standard</div>
+              <div class="description">A musical adventure about a swashbuckling adventure on the high seas with pirates, treasure, and danger around every corner.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Pirates%20of%20the%20Cornettino">Book Tickets for Pirates of the Cornettino</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Frankensteins Monster</div>
+            <div class="meta">
+              <div class="genre">Horror</div>
+              <div class="date">22nd April</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$45-Standard</div>
+              <div class="description">A classic horror tale about a mad scientist who creates a monster that ultimately turns on him.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Frankensteins%20Monster">Book Tickets for Frankensteins Monster</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Time Machine</div>
+            <div class="meta">
+              <div class="genre">Sci-fi</div>
+              <div class="date">23rd April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">150 tickets left</div>
+              <div class="price">$70-Standard</div>
+              <div class="description">A time-travel adventure that takes the audience on a journey through history, from the distant past to the far-off future.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Time%20Machine">Book Tickets for The Time Machine</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Family Matters</div>
+            <div class="meta">
+              <div class="genre">Family</div>
+              <div class="date">28th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">200 tickets left</div>
+              <div class="price">$40-Standard</div>
+              <div class="description">A heartwarming tale of a family facing challenges together and finding strength in their love for each other.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Family%20Matters">Book Tickets for Family Matters</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Bourne Identity</div>
+            <div class="meta">
+              <div class="genre">Action</div>
+              <div class="date">29th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">100 tickets left</div>
+              <div class="price">$90-Standard</div>
+              <div class="description">A high-octane action thriller about a spy with amnesia who must piece together his identity while being pursued by his enemies.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Bourne%20Identity">Book Tickets for The Bourne Identity</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Odd Couple</div>
+            <div class="meta">
+              <div class="genre">Comedy</div>
+              <div class="date">30th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">250 tickets left</div>
+              <div class="price">$30-Standard</div>
+              <div class="description">A hilarious comedy about two mismatched roommates who drive each other crazy.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Odd%20Couple">Book Tickets for The Odd Couple</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Space Opera</div>
+            <div class="meta">
+              <div class="genre">Sci-fi</div>
+              <div class="date">21st April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">20 tickets left</div>
+              <div class="price">$60-Standard</div>
+              <div class="description">A space adventure with epic battles, alien encounters, and a hero fighting for the fate of the galaxy.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Space%20Opera">Book Tickets for Space Opera</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Exorcist</div>
+            <div class="meta">
+              <div class="genre">Horror</div>
+              <div class="date">5th May</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$55-Standard</div>
+              <div class="description">A terrifying tale of demonic possession and the fight to save a young girls soul.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Exorcist">Book Tickets for The Exorcist</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Fright Night</div>
+            <div class="meta">
+              <div class="genre">Horror</div>
+              <div class="date">22nd April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">60 tickets left</div>
+              <div class="price">$32-Standard</div>
+              <div class="description">A spine-chilling tale of a group of friends trapped in a haunted house on Halloween night.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Fright%20Night">Book Tickets for Fright Night</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Great Heist</div>
+            <div class="meta">
+              <div class="genre">Action</div>
+              <div class="date">23rd April</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$46-Standard</div>
+              <div class="description">A high-stakes thriller about a team of thieves attempting to pull off the biggest heist in history.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Great%20Heist">Book Tickets for The Great Heist</a></div>
+          </div>
+          
+          <div class="list__item">
+            <div class="shows">My Big Fat Greek Wedding</div>
+            <div class="meta">
+              <div class="genre">Romance</div>
+              <div class="date">28th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">170 tickets left</div>
+              <div class="price">$22-Standard</div>
+              <div class="description">A heartwarming romantic comedy about a Greek woman who falls in love with a non-Greek man, and the challenges they face as they plan their wedding.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=My%20Big%20Fat%20Greek%20Wedding">Book Tickets for My Big Fat Greek Wedding</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">Cats and Dogs</div>
+            <div class="meta">
+              <div class="genre">Musical</div>
+              <div class="date">29th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">250 tickets left</div>
+              <div class="price">$15-Standard</div>
+              <div class="description">A charming family-friendly musical about the adventures of a group of cats and dogs who must work together to save their home.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=Cats%20and%20Dogs">Book Tickets for Cats and Dogs</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Phantom of the Opera</div>
+            <div class="meta">
+              <div class="genre">Romance</div>
+              <div class="date">6th May</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">15 tickets left</div>
+              <div class="price">$70-Standard</div>
+              <div class="description">A classic romantic tragedy about a beautiful soprano and the mysterious phantom who falls in love with her.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Phantom%20of%20the%20Opera">Book Tickets for The Phantom of the Opera</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Hitchhikers Guide to the Galaxy</div>
+            <div class="meta">
+              <div class="genre">Sci-fi</div>
+              <div class="date">7th May</div>
+              <div class="tickets">Sold-Out</div>
+              <div class="num_ticket">0 tickets left</div>
+              <div class="price">$42-Standard</div>
+              <div class="description">An intergalactic adventure that follows a hapless human and his alien friend as they travel through space in search of the meaning of life.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Hitchhikers%20Guide%20to%20the%20Galaxy">Book Tickets for The Hitchhikers Guide to the Galaxy</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Spy Who Loved Me</div>
+            <div class="meta">
+              <div class="genre">Action</div>
+              <div class="date">30th April</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">100 tickets left</div>
+              <div class="price">$80-Standard</div>
+              <div class="description">A thrilling espionage adventure about a spy who falls in love with a fellow agent while trying to stop a dangerous international conspiracy.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Spy%20Who%20Loved%20Me">Book Tickets for The Spy Who Loved Me</a></div>
+          </div>
+
+          <div class="list__item">
+            <div class="shows">The Odd Life of Timothy Green</div>
+            <div class="meta">
+              <div class="genre">Family</div>
+              <div class="date">5th May</div>
+              <div class="tickets">Available</div>
+              <div class="num_ticket">130 tickets left</div>
+              <div class="price">$40-Standard</div>
+              <div class="description">A heartwarming tale of a couple who, unable to have children, suddenly find a mysterious young boy growing in their garden.</div>
+            </div>
+            <div class="link"><a href="bookpage.html?show=The%20Odd%20Life%20of%20Timothy%20Green">Book Tickets for The Odd Life of Timothy Green</a></div>
+          </div>
+
+      </div>
+    </div>
+ 
+	<script type="text/javascript" src="homepage-java.js"></script>
+</body>
+</html>
